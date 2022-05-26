@@ -1,7 +1,7 @@
 import { useNavigation, useTheme } from '@react-navigation/native';
 import React from 'react';
 
-import DefaultPage from '../../templates/DefaultPage';
+import DefaultPage from '@templates/DefaultPage/index';
 
 import * as S from './styles';
 
