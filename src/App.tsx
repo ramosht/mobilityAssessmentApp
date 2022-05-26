@@ -9,19 +9,11 @@
  */
 
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar, Text, View } from 'react-native';
+
+import Routes from './routes';
 
 function App() {
-  return (
-    <SafeAreaView>
-      <StatusBar />
-      <ScrollView>
-        <View>
-          <Text>Home</Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+  return <Routes />;
 }
 
 export default App;
