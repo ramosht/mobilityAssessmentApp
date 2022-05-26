@@ -3,6 +3,20 @@ import { useColorScheme } from 'react-native';
 import { NavigationContainer, DarkTheme, DefaultTheme, Theme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+// Typefying Routes
+export type AppRootParamList = {
+  Home: undefined;
+  About: undefined;
+  RandomPage: undefined;
+};
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace ReactNavigation {
+    // eslint-disable-next-line @typescript-eslint/no-empty-interface
+    interface RootParamList extends AppRootParamList {}
+  }
+}
+
 // components
 import Home from '../pages/Home';
 // import BottomTab from './BottomTab';
@@ -28,7 +42,7 @@ const MyDarkTheme: Theme = {
   },
 };
 
-const Routes = () => {
+const Routes: React.FC = () => {
   return (
     <NavigationContainer theme={useColorScheme() === 'dark' ? MyDarkTheme : MyDefaultTheme}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
