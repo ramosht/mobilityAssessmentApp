@@ -18,7 +18,7 @@ type ButtonTextProps = {
   bgColor: string;
 };
 export const ButtonText = styled.Text<ButtonTextProps>`
-  color: ${(props) => props.bgColor || '#000000'};
+  color: ${props => props.bgColor || '#000000'};
   text-transform: uppercase;
   font-weight: 600;
   font-size: 16px;

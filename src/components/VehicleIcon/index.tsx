@@ -11,14 +11,16 @@ type VehicleIconProps = {
   size?: number;
 };
 
-const VehicleIcon: React.FC<VehicleIconProps> = ({ vehicleType, size = 64 }) => {
+const VehicleIcon: React.FC<VehicleIconProps> = ({vehicleType, size = 64}) => {
   return (
     <>
       {vehicleType === 'SEDAN' && <Sedan height={size} length={size} />}
       {vehicleType === 'SUV' && <SUV height={size} length={size} />}
       {vehicleType === 'ECO' && <Eco height={size} length={size} />}
       {vehicleType === 'MINIBUS' && <Minibus height={size} length={size} />}
-      {vehicleType === 'ACCESSIBLE' && <Accessible height={size} length={size} />}
+      {vehicleType === 'ACCESSIBLE' && (
+        <Accessible height={size} length={size} />
+      )}
     </>
   );
 };

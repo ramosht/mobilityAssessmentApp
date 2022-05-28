@@ -1,19 +1,19 @@
 import React from 'react';
-import { useColorScheme, View } from 'react-native';
-import { useTheme } from '@react-navigation/native';
+import {useColorScheme, View} from 'react-native';
+import {useTheme} from '@react-navigation/native';
 
-import { SupplierIcon, Text, VehicleIcon } from '@components';
+import {SupplierIcon, Text, VehicleIcon} from '@components';
 import UserIconDark from '../../../../../assets/icons/UserIcon-dark.svg';
 import UserIconLight from '../../../../../assets/icons/UserIcon-light.svg';
 
 import * as S from './styles';
 
-import { AvailableVehicleProps } from '@context/availableVehicles/availableVehicles.types';
+import {AvailableVehicleProps} from '@context/availableVehicles/availableVehicles.types';
 type VehicleCardProps = {
   vehicle: AvailableVehicleProps;
 };
 
-const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
+const VehicleCard: React.FC<VehicleCardProps> = ({vehicle}) => {
   const theme = useTheme();
   const colorScheme = useColorScheme();
 
@@ -23,18 +23,31 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
         <VehicleIcon size={90} vehicleType={vehicle.category.vehicleType} />
       </S.VehicleSvgWrapper>
       <S.VehicleInfoWrapper>
-        <View style={{ justifyContent: 'space-between' }}>
-          <Text style={{ marginBottom: 8 }} fontWeight="Semibold" italic fontSize={24}>
+        <View style={{justifyContent: 'space-between'}}>
+          <Text
+            style={{marginBottom: 8}}
+            fontWeight="Semibold"
+            italic
+            fontSize={24}
+          >
             {vehicle.category.productType}
           </Text>
 
-          <SupplierIcon size={18} supplierName={vehicle.supplier.supplierName} />
+          <SupplierIcon
+            size={18}
+            supplierName={vehicle.supplier.supplierName}
+          />
 
-          <Text style={{ marginTop: 8 }} fontSize={18} fontWeight="Regular" italic>
+          <Text
+            style={{marginTop: 8}}
+            fontSize={18}
+            fontWeight="Regular"
+            italic
+          >
             {vehicle.eta} min
           </Text>
         </View>
-        <View style={{ justifyContent: 'space-between' }}>
+        <View style={{justifyContent: 'space-between'}}>
           <Text fontWeight="Bold" fontSize={26} color={theme.colors.primary}>
             € {vehicle.price.amount}
           </Text>
@@ -44,7 +57,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
             ) : (
               <UserIconDark width={16} height={16} />
             )}
-            <Text style={{ marginLeft: 8 }} fontSize={20}>
+            <Text style={{marginLeft: 8}} fontSize={20}>
               x{vehicle.product.maxPax}
             </Text>
           </S.MaxPassengersWrapper>

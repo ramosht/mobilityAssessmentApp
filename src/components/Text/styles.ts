@@ -1,10 +1,10 @@
 import styled from 'styled-components/native';
-import { TextProps } from '.';
+import {TextProps} from '.';
 
 export const CustomText = styled.Text<TextProps>`
-  color: ${({ color }) => color};
-  font-size: ${({ fontSize }) => fontSize}px;
-  font-family: ${(props) => {
+  color: ${({color}) => color};
+  font-size: ${({fontSize}) => fontSize}px;
+  font-family: ${props => {
     switch (props.fontWeight) {
       case 'Black':
         if (props.italic) {

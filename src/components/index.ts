@@ -3,4 +3,4 @@ import Navbar from './Navbar';
 import VehicleIcon from './VehicleIcon';
 import SupplierIcon from './SupplierIcon';
 
-export { Text, Navbar, VehicleIcon, SupplierIcon };
+export {Text, Navbar, VehicleIcon, SupplierIcon};

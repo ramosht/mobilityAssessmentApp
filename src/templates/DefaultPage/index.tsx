@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
 
 // Components
 import Navbar from '@components/Navbar';
@@ -9,12 +9,17 @@ type DefaultPageProps = {
   showNavbar?: boolean;
 };
 
-const DefaultPage: React.FC<DefaultPageProps> = ({ children, showNavbar = true }) => {
+const DefaultPage: React.FC<DefaultPageProps> = ({
+  children,
+  showNavbar = true,
+}) => {
   return (
     <SafeAreaView style={styles.safeAreaStyle}>
       <StatusBar />
       {showNavbar && <Navbar />}
-      <ScrollView contentContainerStyle={styles.scrollViewContentContainerStyle}>
+      <ScrollView
+        contentContainerStyle={styles.scrollViewContentContainerStyle}
+      >
         {children}
       </ScrollView>
     </SafeAreaView>

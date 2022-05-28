@@ -13,7 +13,7 @@ export type AvailableVehicleProps = {
   };
   product: {
     maxPax: number;
-    bags: { max: number; large: number; small: number };
+    bags: {max: number; large: number; small: number};
     maxSeats: number;
   };
   price: {
@@ -29,5 +29,7 @@ export type AvailableVehicleProps = {
 
 export type AvailableVehiclesContextState = {
   availableVehicles: Array<AvailableVehicleProps>;
-  setAvailableVehicles: React.Dispatch<React.SetStateAction<Array<AvailableVehicleProps>>>;
+  setAvailableVehicles: React.Dispatch<
+    React.SetStateAction<Array<AvailableVehicleProps>>
+  >;
 };

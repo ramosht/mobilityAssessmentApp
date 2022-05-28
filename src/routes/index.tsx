@@ -1,11 +1,16 @@
 import React from 'react';
-import { useColorScheme } from 'react-native';
-import { NavigationContainer, DarkTheme, DefaultTheme, Theme } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {useColorScheme} from 'react-native';
+import {
+  NavigationContainer,
+  DarkTheme,
+  DefaultTheme,
+  Theme,
+} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 // Context Providers
-import { AvailableVehicleProvider } from '@context/availableVehicles/availableVehicles.context';
-import { FilterProvider } from '@context/filter/filter.context';
+import {AvailableVehicleProvider} from '@context/availableVehicles/availableVehicles.context';
+import {FilterProvider} from '@context/filter/filter.context';
 
 // components
 import Home from '../pages/Home';
@@ -35,10 +40,12 @@ const MyDarkTheme: Theme = {
 
 const Routes: React.FC = () => {
   return (
-    <NavigationContainer theme={useColorScheme() === 'dark' ? MyDarkTheme : MyDefaultTheme}>
+    <NavigationContainer
+      theme={useColorScheme() === 'dark' ? MyDarkTheme : MyDefaultTheme}
+    >
       <AvailableVehicleProvider>
         <FilterProvider>
-          <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Navigator screenOptions={{headerShown: false}}>
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="About" component={About} />
             <Stack.Screen name="RandomPage" component={RandomPage} />

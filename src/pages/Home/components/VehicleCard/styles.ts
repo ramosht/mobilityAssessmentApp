@@ -6,7 +6,7 @@ type WrapperProps = {
 export const Wrapper = styled.TouchableOpacity<WrapperProps>`
   flex-direction: row;
   border-width: 1px;
-  border-color: ${(props) => props.borderColor};
+  border-color: ${props => props.borderColor};
   margin-vertical: 8px;
   padding: 0;
   border-radius: 16px;

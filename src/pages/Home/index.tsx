@@ -1,6 +1,6 @@
-import { useAvailableVehicles } from '@context/availableVehicles/availableVehicles.context';
-import { useFilter } from '@context/filter/filter.context';
-import React, { useEffect } from 'react';
+import {useAvailableVehicles} from '@context/availableVehicles/availableVehicles.context';
+import {useFilter} from '@context/filter/filter.context';
+import React, {useEffect} from 'react';
 
 // Products
 import productsJson from '../../../assets/availability.json';
@@ -12,8 +12,8 @@ import VehicleCard from './components/VehicleCard';
 import * as S from './styles';
 
 function Home() {
-  const { availableVehicles, setAvailableVehicles } = useAvailableVehicles();
-  const { setFilter } = useFilter();
+  const {availableVehicles, setAvailableVehicles} = useAvailableVehicles();
+  const {setFilter} = useFilter();
 
   useEffect(() => {
     const sortedProductsByETA = productsJson.sort(
@@ -21,13 +21,13 @@ function Home() {
     );
 
     setAvailableVehicles(sortedProductsByETA);
-    setFilter({ filter: 'eta', order: 'asc' });
+    setFilter({filter: 'eta', order: 'asc'});
   }, [setAvailableVehicles, setFilter]);
 
   return (
     <DefaultPage>
       <S.Wrapper>
-        {availableVehicles.map((vehicle) => (
+        {availableVehicles.map(vehicle => (
           <VehicleCard key={vehicle.availabilityId} vehicle={vehicle} />
         ))}
       </S.Wrapper>

@@ -1,4 +1,4 @@
-import { useNavigation, useTheme } from '@react-navigation/native';
+import {useNavigation, useTheme} from '@react-navigation/native';
 import React from 'react';
 
 import DefaultPage from '../../templates/DefaultPage';

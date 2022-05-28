@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, {createContext, useContext, useState} from 'react';
 
 import {
   AvailableVehicleProps,
@@ -11,8 +11,12 @@ const AvailableVehiclesContext = createContext<AvailableVehiclesContextState>({
   setAvailableVehicles: () => {},
 });
 
-const AvailableVehicleProvider: React.FC<AvailableVehicleProviderProps> = ({ children }) => {
-  const [availableVehicles, setAvailableVehicles] = useState<Array<AvailableVehicleProps>>([]);
+const AvailableVehicleProvider: React.FC<AvailableVehicleProviderProps> = ({
+  children,
+}) => {
+  const [availableVehicles, setAvailableVehicles] = useState<
+    Array<AvailableVehicleProps>
+  >([]);
 
   const providerValue: AvailableVehiclesContextState = {
     availableVehicles,
@@ -30,4 +34,4 @@ const useAvailableVehicles = () => {
   return useContext(AvailableVehiclesContext);
 };
 
-export { useAvailableVehicles, AvailableVehicleProvider };
+export {useAvailableVehicles, AvailableVehicleProvider};

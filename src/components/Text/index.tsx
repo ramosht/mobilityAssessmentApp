@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleProp, TextStyle } from 'react-native';
-import { useTheme } from '@react-navigation/native';
+import {StyleProp, TextStyle} from 'react-native';
+import {useTheme} from '@react-navigation/native';
 
 import * as S from './styles';
 
@@ -21,7 +21,14 @@ export type TextProps = {
   style?: StyleProp<TextStyle>;
 };
 
-const Text: React.FC<TextProps> = ({ color, fontSize, fontWeight, italic, style, children }) => {
+const Text: React.FC<TextProps> = ({
+  color,
+  fontSize,
+  fontWeight,
+  italic,
+  style,
+  children,
+}) => {
   const theme = useTheme();
 
   return (
