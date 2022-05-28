@@ -12,8 +12,24 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		14A4D78002E94E38AF157412 /* NoiGroteskTrial-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B233E80D6D74EDAA1444D77 /* NoiGroteskTrial-Semibold.ttf */; };
+		281B72301259445EB3C20BCA /* NoiGroteskTrial-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECDD4F351A4145A0B6BBAFC4 /* NoiGroteskTrial-LightItalic.ttf */; };
+		4C69187A3ADD4089895B9348 /* NoiGroteskTrial-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AB88F626FE44920B7AAE56F /* NoiGroteskTrial-SemiboldItalic.ttf */; };
+		523A1CAAE7FC403A8CA13B77 /* NoiGroteskTrial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6ABA3D3DF63A4DFB858CF8E3 /* NoiGroteskTrial-Regular.ttf */; };
+		59D3FB489B84429D94B3DEB2 /* NoiGroteskTrial-UltraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC950AF7DCE9463B947E336C /* NoiGroteskTrial-UltraLightItalic.ttf */; };
+		5AC7E3D882DB4935B84181E0 /* NoiGroteskTrial-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D3397145874EC0B378CE17 /* NoiGroteskTrial-RegularItalic.ttf */; };
+		72DE64E365DA4C868FDC4BDF /* NoiGroteskTrial-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79C27BC8BC394018B1115CBE /* NoiGroteskTrial-Medium.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-mobilityAssessmentApp-mobilityAssessmentAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-mobilityAssessmentApp-mobilityAssessmentAppTests.a */; };
+		76CEC57B4FE44D799D60FC82 /* NoiGroteskTrial-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B463D3886ABF4939987FE9CF /* NoiGroteskTrial-Black.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		951EA3785C0B4E5C8E008BE2 /* NoiGroteskTrial-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A2C568593AB462180D5FA33 /* NoiGroteskTrial-BlackItalic.ttf */; };
+		B0F949C078D54FA1A0314555 /* NoiGroteskTrial-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD2AB3B4D3824432AD19FFCC /* NoiGroteskTrial-ThinItalic.ttf */; };
+		BB207ED6472D4A1FB605E418 /* NoiGroteskTrial-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F16B2E02C64D4FDA81012EDC /* NoiGroteskTrial-BoldItalic.ttf */; };
+		C5676F2ABEB54867B7BE5968 /* NoiGroteskTrial-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 16B111BE07C24E4B8ACFFA36 /* NoiGroteskTrial-UltraLight.ttf */; };
+		CC0DB76D776C4B779F3CB211 /* NoiGroteskTrial-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4321CCB468E54025A50AF19E /* NoiGroteskTrial-Light.ttf */; };
+		DD8DF66C06554B46B19C326A /* NoiGroteskTrial-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCD73BEE8B87464785547337 /* NoiGroteskTrial-MediumItalic.ttf */; };
+		DF5916FAC9BA40C4AFC49FCA /* NoiGroteskTrial-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19F68C4D90A848139C9F08F3 /* NoiGroteskTrial-Thin.ttf */; };
+		E907CA0243E94FD3A28EB699 /* NoiGroteskTrial-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A8254D82CC44E0990FC77FB /* NoiGroteskTrial-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +52,30 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = mobilityAssessmentApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = mobilityAssessmentApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = mobilityAssessmentApp/main.m; sourceTree = "<group>"; };
+		16B111BE07C24E4B8ACFFA36 /* NoiGroteskTrial-UltraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-UltraLight.ttf"; path = "../assets/fonts/NoiGroteskTrial-UltraLight.ttf"; sourceTree = "<group>"; };
+		19F68C4D90A848139C9F08F3 /* NoiGroteskTrial-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-Thin.ttf"; path = "../assets/fonts/NoiGroteskTrial-Thin.ttf"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-mobilityAssessmentApp-mobilityAssessmentAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mobilityAssessmentApp-mobilityAssessmentAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-mobilityAssessmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobilityAssessmentApp.debug.xcconfig"; path = "Target Support Files/Pods-mobilityAssessmentApp/Pods-mobilityAssessmentApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4321CCB468E54025A50AF19E /* NoiGroteskTrial-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-Light.ttf"; path = "../assets/fonts/NoiGroteskTrial-Light.ttf"; sourceTree = "<group>"; };
+		4B233E80D6D74EDAA1444D77 /* NoiGroteskTrial-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-Semibold.ttf"; path = "../assets/fonts/NoiGroteskTrial-Semibold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-mobilityAssessmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobilityAssessmentApp.release.xcconfig"; path = "Target Support Files/Pods-mobilityAssessmentApp/Pods-mobilityAssessmentApp.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-mobilityAssessmentApp-mobilityAssessmentAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobilityAssessmentApp-mobilityAssessmentAppTests.debug.xcconfig"; path = "Target Support Files/Pods-mobilityAssessmentApp-mobilityAssessmentAppTests/Pods-mobilityAssessmentApp-mobilityAssessmentAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-mobilityAssessmentApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mobilityAssessmentApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB88F626FE44920B7AAE56F /* NoiGroteskTrial-SemiboldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-SemiboldItalic.ttf"; path = "../assets/fonts/NoiGroteskTrial-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		6ABA3D3DF63A4DFB858CF8E3 /* NoiGroteskTrial-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-Regular.ttf"; path = "../assets/fonts/NoiGroteskTrial-Regular.ttf"; sourceTree = "<group>"; };
+		79C27BC8BC394018B1115CBE /* NoiGroteskTrial-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-Medium.ttf"; path = "../assets/fonts/NoiGroteskTrial-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = mobilityAssessmentApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-mobilityAssessmentApp-mobilityAssessmentAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobilityAssessmentApp-mobilityAssessmentAppTests.release.xcconfig"; path = "Target Support Files/Pods-mobilityAssessmentApp-mobilityAssessmentAppTests/Pods-mobilityAssessmentApp-mobilityAssessmentAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		8A2C568593AB462180D5FA33 /* NoiGroteskTrial-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-BlackItalic.ttf"; path = "../assets/fonts/NoiGroteskTrial-BlackItalic.ttf"; sourceTree = "<group>"; };
+		8A8254D82CC44E0990FC77FB /* NoiGroteskTrial-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-Bold.ttf"; path = "../assets/fonts/NoiGroteskTrial-Bold.ttf"; sourceTree = "<group>"; };
+		B463D3886ABF4939987FE9CF /* NoiGroteskTrial-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-Black.ttf"; path = "../assets/fonts/NoiGroteskTrial-Black.ttf"; sourceTree = "<group>"; };
+		CCD73BEE8B87464785547337 /* NoiGroteskTrial-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-MediumItalic.ttf"; path = "../assets/fonts/NoiGroteskTrial-MediumItalic.ttf"; sourceTree = "<group>"; };
+		DC950AF7DCE9463B947E336C /* NoiGroteskTrial-UltraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-UltraLightItalic.ttf"; path = "../assets/fonts/NoiGroteskTrial-UltraLightItalic.ttf"; sourceTree = "<group>"; };
+		DD2AB3B4D3824432AD19FFCC /* NoiGroteskTrial-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-ThinItalic.ttf"; path = "../assets/fonts/NoiGroteskTrial-ThinItalic.ttf"; sourceTree = "<group>"; };
+		ECDD4F351A4145A0B6BBAFC4 /* NoiGroteskTrial-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-LightItalic.ttf"; path = "../assets/fonts/NoiGroteskTrial-LightItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F16B2E02C64D4FDA81012EDC /* NoiGroteskTrial-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-BoldItalic.ttf"; path = "../assets/fonts/NoiGroteskTrial-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F9D3397145874EC0B378CE17 /* NoiGroteskTrial-RegularItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NoiGroteskTrial-RegularItalic.ttf"; path = "../assets/fonts/NoiGroteskTrial-RegularItalic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +154,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				957AFDD2D9EB4641BD5F06DE /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -135,6 +168,30 @@
 				00E356EE1AD99517003FC87E /* mobilityAssessmentAppTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		957AFDD2D9EB4641BD5F06DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A8254D82CC44E0990FC77FB /* NoiGroteskTrial-Bold.ttf */,
+				4321CCB468E54025A50AF19E /* NoiGroteskTrial-Light.ttf */,
+				79C27BC8BC394018B1115CBE /* NoiGroteskTrial-Medium.ttf */,
+				6ABA3D3DF63A4DFB858CF8E3 /* NoiGroteskTrial-Regular.ttf */,
+				4B233E80D6D74EDAA1444D77 /* NoiGroteskTrial-Semibold.ttf */,
+				B463D3886ABF4939987FE9CF /* NoiGroteskTrial-Black.ttf */,
+				8A2C568593AB462180D5FA33 /* NoiGroteskTrial-BlackItalic.ttf */,
+				F16B2E02C64D4FDA81012EDC /* NoiGroteskTrial-BoldItalic.ttf */,
+				ECDD4F351A4145A0B6BBAFC4 /* NoiGroteskTrial-LightItalic.ttf */,
+				CCD73BEE8B87464785547337 /* NoiGroteskTrial-MediumItalic.ttf */,
+				F9D3397145874EC0B378CE17 /* NoiGroteskTrial-RegularItalic.ttf */,
+				6AB88F626FE44920B7AAE56F /* NoiGroteskTrial-SemiboldItalic.ttf */,
+				19F68C4D90A848139C9F08F3 /* NoiGroteskTrial-Thin.ttf */,
+				DD2AB3B4D3824432AD19FFCC /* NoiGroteskTrial-ThinItalic.ttf */,
+				16B111BE07C24E4B8ACFFA36 /* NoiGroteskTrial-UltraLight.ttf */,
+				DC950AF7DCE9463B947E336C /* NoiGroteskTrial-UltraLightItalic.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -244,6 +301,22 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				E907CA0243E94FD3A28EB699 /* NoiGroteskTrial-Bold.ttf in Resources */,
+				CC0DB76D776C4B779F3CB211 /* NoiGroteskTrial-Light.ttf in Resources */,
+				72DE64E365DA4C868FDC4BDF /* NoiGroteskTrial-Medium.ttf in Resources */,
+				523A1CAAE7FC403A8CA13B77 /* NoiGroteskTrial-Regular.ttf in Resources */,
+				14A4D78002E94E38AF157412 /* NoiGroteskTrial-Semibold.ttf in Resources */,
+				76CEC57B4FE44D799D60FC82 /* NoiGroteskTrial-Black.ttf in Resources */,
+				951EA3785C0B4E5C8E008BE2 /* NoiGroteskTrial-BlackItalic.ttf in Resources */,
+				BB207ED6472D4A1FB605E418 /* NoiGroteskTrial-BoldItalic.ttf in Resources */,
+				281B72301259445EB3C20BCA /* NoiGroteskTrial-LightItalic.ttf in Resources */,
+				DD8DF66C06554B46B19C326A /* NoiGroteskTrial-MediumItalic.ttf in Resources */,
+				5AC7E3D882DB4935B84181E0 /* NoiGroteskTrial-RegularItalic.ttf in Resources */,
+				4C69187A3ADD4089895B9348 /* NoiGroteskTrial-SemiboldItalic.ttf in Resources */,
+				DF5916FAC9BA40C4AFC49FCA /* NoiGroteskTrial-Thin.ttf in Resources */,
+				B0F949C078D54FA1A0314555 /* NoiGroteskTrial-ThinItalic.ttf in Resources */,
+				C5676F2ABEB54867B7BE5968 /* NoiGroteskTrial-UltraLight.ttf in Resources */,
+				59D3FB489B84429D94B3DEB2 /* NoiGroteskTrial-UltraLightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

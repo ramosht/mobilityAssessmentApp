@@ -1,21 +1,35 @@
-import { useNavigation, useTheme } from '@react-navigation/native';
-import React from 'react';
+import { useAvailableVehicles } from '@context/availableVehicles/availableVehicles.context';
+import { useFilter } from '@context/filter/filter.context';
+import React, { useEffect } from 'react';
 
+// Products
+import productsJson from '../../../assets/availability.json';
+
+// Components
 import DefaultPage from '../../templates/DefaultPage';
+import VehicleCard from './components/VehicleCard';
 
 import * as S from './styles';
 
 function Home() {
-  const theme = useTheme();
-  const navigation = useNavigation();
+  const { availableVehicles, setAvailableVehicles } = useAvailableVehicles();
+  const { setFilter } = useFilter();
+
+  useEffect(() => {
+    const sortedProductsByETA = productsJson.sort(
+      (vehicleA, vehicleB) => vehicleA.eta - vehicleB.eta,
+    );
+
+    setAvailableVehicles(sortedProductsByETA);
+    setFilter({ filter: 'eta', order: 'asc' });
+  }, [setAvailableVehicles, setFilter]);
 
   return (
     <DefaultPage>
       <S.Wrapper>
-        <S.Title>Home</S.Title>
-        <S.Button onPress={() => navigation.navigate('About')}>
-          <S.ButtonText bgColor={theme.colors.primary}>Go to About</S.ButtonText>
-        </S.Button>
+        {availableVehicles.map((vehicle) => (
+          <VehicleCard key={vehicle.availabilityId} vehicle={vehicle} />
+        ))}
       </S.Wrapper>
     </DefaultPage>
   );
