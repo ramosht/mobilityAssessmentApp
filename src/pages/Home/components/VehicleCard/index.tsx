@@ -28,8 +28,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({vehicle}) => {
             style={{marginBottom: 8}}
             fontWeight="Semibold"
             italic
-            fontSize={24}
-          >
+            fontSize={24}>
             {vehicle.category.productType}
           </Text>
 
@@ -42,8 +41,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({vehicle}) => {
             style={{marginTop: 8}}
             fontSize={18}
             fontWeight="Regular"
-            italic
-          >
+            italic>
             {vehicle.eta} min
           </Text>
         </View>

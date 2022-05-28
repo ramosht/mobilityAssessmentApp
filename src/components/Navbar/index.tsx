@@ -14,9 +14,9 @@ const Navbar = () => {
     <S.Wrapper borderColor={theme.colors.border}>
       <S.Column>
         {useColorScheme() === 'dark' ? (
-          <CartrawlerLightSVG width={180} />
+          <CartrawlerLightSVG width={140} />
         ) : (
-          <CartrawlerDarkSVG width={180} />
+          <CartrawlerDarkSVG width={140} />
         )}
       </S.Column>
     </S.Wrapper>
