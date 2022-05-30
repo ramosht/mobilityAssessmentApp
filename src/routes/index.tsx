@@ -1,23 +1,35 @@
 import React from 'react';
 import {useColorScheme} from 'react-native';
+import {AvailableVehicleProps} from '@context/availableVehicles/availableVehicles.types';
 import {
   NavigationContainer,
   DarkTheme,
   DefaultTheme,
   Theme,
 } from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {
+  createDrawerNavigator,
+  DrawerContentComponentProps,
+} from '@react-navigation/drawer';
+
+import CustomDrawer from '../components/CustomDrawer';
 
 // Context Providers
 import {AvailableVehicleProvider} from '@context/availableVehicles/availableVehicles.context';
 import {FilterProvider} from '@context/filter/filter.context';
 
-// components
+// Pages
 import Home from '../pages/Home';
+import AvailabilityInfo from '../pages/AvailabilityInfo';
 import About from '../pages/About';
-import RandomPage from '../pages/RandomPage';
 
-const Stack = createNativeStackNavigator();
+// Types
+type AppRootParamList = {
+  Home: undefined;
+  AvailabilityInfo: {availableVehicle: AvailableVehicleProps};
+};
+
+const Drawer = createDrawerNavigator<AppRootParamList>();
 
 // Customizing Default Themes
 const MyDefaultTheme: Theme = {
@@ -41,15 +53,22 @@ const MyDarkTheme: Theme = {
 const Routes: React.FC = () => {
   return (
     <NavigationContainer
-      theme={useColorScheme() === 'dark' ? MyDarkTheme : MyDefaultTheme}
-    >
+      theme={useColorScheme() === 'dark' ? MyDarkTheme : MyDefaultTheme}>
       <AvailableVehicleProvider>
         <FilterProvider>
-          <Stack.Navigator screenOptions={{headerShown: false}}>
-            <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="About" component={About} />
-            <Stack.Screen name="RandomPage" component={RandomPage} />
-          </Stack.Navigator>
+          <Drawer.Navigator
+            screenOptions={{headerShown: false}}
+            initialRouteName="Home"
+            drawerContent={(props: DrawerContentComponentProps) =>
+              CustomDrawer(props)
+            }>
+            <Drawer.Screen name="Home" component={Home} />
+            <Drawer.Screen
+              name="AvailabilityInfo"
+              component={AvailabilityInfo}
+            />
+            <Drawer.Screen name="About" component={About} />
+          </Drawer.Navigator>
         </FilterProvider>
       </AvailableVehicleProvider>
     </NavigationContainer>

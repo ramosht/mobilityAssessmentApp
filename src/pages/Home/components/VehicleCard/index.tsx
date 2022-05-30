@@ -1,6 +1,10 @@
 import React from 'react';
 import {useColorScheme, View} from 'react-native';
-import {useTheme} from '@react-navigation/native';
+import {
+  NavigationRouteContext,
+  useNavigation,
+  useTheme,
+} from '@react-navigation/native';
 
 import {SupplierIcon, Text, VehicleIcon} from '@components';
 import UserIconDark from '../../../../../assets/icons/UserIcon-dark.svg';
@@ -16,9 +20,14 @@ type VehicleCardProps = {
 const VehicleCard: React.FC<VehicleCardProps> = ({vehicle}) => {
   const theme = useTheme();
   const colorScheme = useColorScheme();
+  const navigation = useNavigation();
 
   return (
-    <S.Wrapper borderColor={theme.colors.border}>
+    <S.Wrapper
+      onPress={() =>
+        navigation.navigate('AvailabilityInfo', {availableVehicle: vehicle})
+      }
+      borderColor={theme.colors.border}>
       <S.VehicleSvgWrapper>
         <VehicleIcon size={90} vehicleType={vehicle.category.vehicleType} />
       </S.VehicleSvgWrapper>
@@ -29,7 +38,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({vehicle}) => {
             fontWeight="Semibold"
             italic
             fontSize={24}>
-            {vehicle.category.productType}
+            {vehicle.category.vehicleType}
           </Text>
 
           <SupplierIcon

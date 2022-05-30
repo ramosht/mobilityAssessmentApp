@@ -17,16 +17,16 @@ const SupplierIcon: React.FC<SupplierIconProps> = ({supplierName, size}) => {
   return (
     <>
       {supplierName === 'Bolt' && colorScheme === 'dark' && (
-        <BoltLight height={size} />
+        <BoltLight height={size} width={size} />
       )}
       {supplierName === 'Bolt' && colorScheme === 'light' && (
-        <BoltDark height={size} />
+        <BoltDark height={size} width={size} />
       )}
       {supplierName === 'FREENOW' && colorScheme === 'dark' && (
-        <FreenowLight height={size} />
+        <FreenowLight height={size} width={size} />
       )}
       {supplierName === 'FREENOW' && colorScheme === 'light' && (
-        <FreenowDark height={size} />
+        <FreenowDark height={size} width={size} />
       )}
     </>
   );

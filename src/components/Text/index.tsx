@@ -37,8 +37,7 @@ const Text: React.FC<TextProps> = ({
       fontSize={fontSize || 12}
       fontWeight={fontWeight}
       italic={italic || false}
-      style={style}
-    >
+      style={style}>
       {children}
     </S.CustomText>
   );

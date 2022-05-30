@@ -11,7 +11,8 @@ module.exports = {
           '@templates': './src/templates',
           '@context': './src/context'
         }
-      }
-    ]
+      },
+    ],
+    'react-native-reanimated/plugin'
   ],
 };

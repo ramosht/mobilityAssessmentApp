@@ -9,4 +9,8 @@ export const Wrapper = styled.View<WrapperProps>`
   border-color: ${({borderColor}) => borderColor};
 `;
 
-export const Column = styled.View``;
+export const Column = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
