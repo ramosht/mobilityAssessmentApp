@@ -1,5 +1,4 @@
 import React from 'react';
-import {useColorScheme} from 'react-native';
 import {AvailableVehicleProps} from '@context/availableVehicles/availableVehicles.types';
 import {
   NavigationContainer,
@@ -17,6 +16,10 @@ import CustomDrawer from '../components/CustomDrawer';
 // Context Providers
 import {AvailableVehicleProvider} from '@context/availableVehicles/availableVehicles.context';
 import {FilterProvider} from '@context/filter/filter.context';
+import {
+  AppColorSchemeProvider,
+  useAppColorScheme,
+} from '@context/theme/theme.context';
 
 // Pages
 import Home from '../pages/Home';
@@ -27,6 +30,7 @@ import About from '../pages/About';
 type AppRootParamList = {
   Home: undefined;
   AvailabilityInfo: {availableVehicle: AvailableVehicleProps};
+  About: undefined;
 };
 
 const Drawer = createDrawerNavigator<AppRootParamList>();
@@ -51,24 +55,28 @@ const MyDarkTheme: Theme = {
 };
 
 const Routes: React.FC = () => {
+  const {appTheme} = useAppColorScheme();
+
   return (
     <NavigationContainer
-      theme={useColorScheme() === 'dark' ? MyDarkTheme : MyDefaultTheme}>
+      theme={appTheme === 'dark' ? MyDarkTheme : MyDefaultTheme}>
       <AvailableVehicleProvider>
         <FilterProvider>
-          <Drawer.Navigator
-            screenOptions={{headerShown: false}}
-            initialRouteName="Home"
-            drawerContent={(props: DrawerContentComponentProps) =>
-              CustomDrawer(props)
-            }>
-            <Drawer.Screen name="Home" component={Home} />
-            <Drawer.Screen
-              name="AvailabilityInfo"
-              component={AvailabilityInfo}
-            />
-            <Drawer.Screen name="About" component={About} />
-          </Drawer.Navigator>
+          <AppColorSchemeProvider>
+            <Drawer.Navigator
+              screenOptions={{headerShown: false}}
+              initialRouteName="Home"
+              drawerContent={(props: DrawerContentComponentProps) =>
+                CustomDrawer(props)
+              }>
+              <Drawer.Screen name="Home" component={Home} />
+              <Drawer.Screen
+                name="AvailabilityInfo"
+                component={AvailabilityInfo}
+              />
+              <Drawer.Screen name="About" component={About} />
+            </Drawer.Navigator>
+          </AppColorSchemeProvider>
         </FilterProvider>
       </AvailableVehicleProvider>
     </NavigationContainer>

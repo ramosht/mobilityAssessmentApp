@@ -1,10 +1,6 @@
 import React from 'react';
-import {useColorScheme, View} from 'react-native';
-import {
-  NavigationRouteContext,
-  useNavigation,
-  useTheme,
-} from '@react-navigation/native';
+import {View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 import {SupplierIcon, Text, VehicleIcon} from '@components';
 import UserIconDark from '../../../../../assets/icons/UserIcon-dark.svg';
@@ -13,13 +9,14 @@ import UserIconLight from '../../../../../assets/icons/UserIcon-light.svg';
 import * as S from './styles';
 
 import {AvailableVehicleProps} from '@context/availableVehicles/availableVehicles.types';
+import {useAppColorScheme} from '@context/theme/theme.context';
 type VehicleCardProps = {
   vehicle: AvailableVehicleProps;
 };
 
 const VehicleCard: React.FC<VehicleCardProps> = ({vehicle}) => {
-  const theme = useTheme();
-  const colorScheme = useColorScheme();
+  const {theme} = useAppColorScheme();
+  const {appTheme} = useAppColorScheme();
   const navigation = useNavigation();
 
   return (
@@ -27,7 +24,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({vehicle}) => {
       onPress={() =>
         navigation.navigate('AvailabilityInfo', {availableVehicle: vehicle})
       }
-      borderColor={theme.colors.border}>
+      borderColor={theme.borderColor}>
       <S.VehicleSvgWrapper>
         <VehicleIcon size={90} vehicleType={vehicle.category.vehicleType} />
       </S.VehicleSvgWrapper>
@@ -55,11 +52,11 @@ const VehicleCard: React.FC<VehicleCardProps> = ({vehicle}) => {
           </Text>
         </View>
         <View style={{justifyContent: 'space-between'}}>
-          <Text fontWeight="Bold" fontSize={26} color={theme.colors.primary}>
+          <Text fontWeight="Bold" fontSize={26} color={theme.primary}>
             € {vehicle.price.amount}
           </Text>
           <S.MaxPassengersWrapper>
-            {colorScheme === 'dark' ? (
+            {appTheme === 'dark' ? (
               <UserIconLight width={16} height={16} />
             ) : (
               <UserIconDark width={16} height={16} />

@@ -2,16 +2,17 @@ import React, {useCallback} from 'react';
 
 import * as S from './styles';
 
-import {useNavigation, useTheme} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import {Switch} from 'react-native-paper';
 import {Text} from '@components';
-import {View} from 'react-native';
 import {DrawerContentComponentProps} from '@react-navigation/drawer';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {useAppColorScheme} from '@context/theme/theme.context';
 
 const CustomDrawer: React.FC<DrawerContentComponentProps> = props => {
   const navigation = useNavigation();
-  const theme = useTheme();
+  const {theme} = useAppColorScheme();
+  const {appTheme, setAppTheme} = useAppColorScheme();
 
   const getIsActive = useCallback(
     (routeName: string) => {
@@ -24,14 +25,24 @@ const CustomDrawer: React.FC<DrawerContentComponentProps> = props => {
     [props.state],
   );
 
+  const toggleColorScheme = useCallback(() => {
+    if (appTheme === 'dark') {
+      setAppTheme('light');
+    } else {
+      setAppTheme('dark');
+    }
+  }, [appTheme, setAppTheme]);
+
   return (
-    <View>
+    <S.Wrapper theme={theme}>
       <S.ListItem>
         <TouchableOpacity onPress={() => navigation.navigate('Home')}>
           <S.ListItemContent
             active={getIsActive('home')}
-            primaryColor={theme.colors.primary}>
-            <Text>Home</Text>
+            primaryColor={theme.primary}>
+            <Text fontSize={14} fontWeight="Regular">
+              Home
+            </Text>
           </S.ListItemContent>
         </TouchableOpacity>
       </S.ListItem>
@@ -39,18 +50,25 @@ const CustomDrawer: React.FC<DrawerContentComponentProps> = props => {
         <TouchableOpacity onPress={() => navigation.navigate('About')}>
           <S.ListItemContent
             active={getIsActive('about')}
-            primaryColor={theme.colors.primary}>
-            <Text>About</Text>
+            primaryColor={theme.primary}>
+            <Text fontSize={14} fontWeight="Regular">
+              About
+            </Text>
           </S.ListItemContent>
         </TouchableOpacity>
       </S.ListItem>
-      <S.ListItem>
-        <S.ListItemContent primaryColor={theme.colors.primary}>
-          <Text>Dark Mode:</Text>
-          <Switch />
+      <S.ListItem separator>
+        <S.ListItemContent primaryColor={theme.primary}>
+          <Text fontSize={14} fontWeight="Regular">
+            Dark Mode:
+          </Text>
+          <Switch
+            value={appTheme === 'dark'}
+            onValueChange={toggleColorScheme}
+          />
         </S.ListItemContent>
       </S.ListItem>
-    </View>
+    </S.Wrapper>
   );
 };
 

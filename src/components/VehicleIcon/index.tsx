@@ -14,12 +14,20 @@ type VehicleIconProps = {
 const VehicleIcon: React.FC<VehicleIconProps> = ({vehicleType, size = 64}) => {
   return (
     <>
-      {vehicleType === 'SEDAN' && <Sedan height={size} length={size} />}
-      {vehicleType === 'SUV' && <SUV height={size} length={size} />}
-      {vehicleType === 'ECO' && <Eco height={size} length={size} />}
-      {vehicleType === 'MINIBUS' && <Minibus height={size} length={size} />}
+      {vehicleType === 'SEDAN' && (
+        <Sedan fill="#000000" height={size} length={size} />
+      )}
+      {vehicleType === 'SUV' && (
+        <SUV fill="#000000" height={size} length={size} />
+      )}
+      {vehicleType === 'ECO' && (
+        <Eco fill="#000000" height={size} length={size} />
+      )}
+      {vehicleType === 'MINIBUS' && (
+        <Minibus fill="#000000" height={size} length={size} />
+      )}
       {vehicleType === 'ACCESSIBLE' && (
-        <Accessible height={size} length={size} />
+        <Accessible fill="#000000" height={size} length={size} />
       )}
     </>
   );

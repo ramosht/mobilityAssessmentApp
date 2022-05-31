@@ -1,8 +1,11 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
 
+import * as S from './styles';
+
 // Components
 import Navbar from '@components/Navbar';
+import {useAppColorScheme} from '@context/theme/theme.context';
 
 type DefaultPageProps = {
   children: React.ReactNode;
@@ -15,22 +18,21 @@ const DefaultPage: React.FC<DefaultPageProps> = ({
   showNavbar = true,
   goBack = false,
 }) => {
+  const {theme} = useAppColorScheme();
+
   return (
-    <SafeAreaView style={styles.safeAreaStyle}>
+    <S.SafeAreaView theme={theme}>
       <StatusBar />
       {showNavbar && <Navbar goBack={goBack} />}
       <ScrollView
         contentContainerStyle={styles.scrollViewContentContainerStyle}>
         {children}
       </ScrollView>
-    </SafeAreaView>
+    </S.SafeAreaView>
   );
 };
 
 const styles = {
-  safeAreaStyle: {
-    flex: 1,
-  },
   scrollViewContentContainerStyle: {
     flexGrow: 1,
     padding: 16,

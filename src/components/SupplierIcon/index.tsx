@@ -1,5 +1,5 @@
+import {useAppColorScheme} from '@context/theme/theme.context';
 import React from 'react';
-import {useColorScheme} from 'react-native';
 
 import BoltDark from '../../../assets/logos/supplier-bolt-dark.svg';
 import BoltLight from '../../../assets/logos/supplier-bolt-light.svg';
@@ -12,20 +12,20 @@ type SupplierIconProps = {
 };
 
 const SupplierIcon: React.FC<SupplierIconProps> = ({supplierName, size}) => {
-  const colorScheme = useColorScheme();
+  const {appTheme} = useAppColorScheme();
 
   return (
     <>
-      {supplierName === 'Bolt' && colorScheme === 'dark' && (
+      {supplierName === 'Bolt' && appTheme === 'dark' && (
         <BoltLight height={size} width={size} />
       )}
-      {supplierName === 'Bolt' && colorScheme === 'light' && (
+      {supplierName === 'Bolt' && appTheme === 'light' && (
         <BoltDark height={size} width={size} />
       )}
-      {supplierName === 'FREENOW' && colorScheme === 'dark' && (
+      {supplierName === 'FREENOW' && appTheme === 'dark' && (
         <FreenowLight height={size} width={size} />
       )}
-      {supplierName === 'FREENOW' && colorScheme === 'light' && (
+      {supplierName === 'FREENOW' && appTheme === 'light' && (
         <FreenowDark height={size} width={size} />
       )}
     </>

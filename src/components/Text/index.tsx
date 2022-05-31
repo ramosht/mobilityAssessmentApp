@@ -3,6 +3,7 @@ import {StyleProp, TextStyle} from 'react-native';
 import {useTheme} from '@react-navigation/native';
 
 import * as S from './styles';
+import {useAppColorScheme} from '@context/theme/theme.context';
 
 export type TextProps = {
   children: React.ReactNode;
@@ -29,11 +30,11 @@ const Text: React.FC<TextProps> = ({
   style,
   children,
 }) => {
-  const theme = useTheme();
+  const {theme} = useAppColorScheme();
 
   return (
     <S.CustomText
-      color={color || theme.colors.text}
+      color={color || theme.text}
       fontSize={fontSize || 12}
       fontWeight={fontWeight}
       italic={italic || false}
