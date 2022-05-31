@@ -23,7 +23,12 @@ const Navbar: React.FC<NavbarProps> = ({goBack}) => {
       {goBack ? (
         <S.Column>
           <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Icon size={26} family="Feather" name="arrow-left" />
+            <Icon
+              size={26}
+              family="Feather"
+              name="arrow-left"
+              color={theme.text}
+            />
           </TouchableOpacity>
         </S.Column>
       ) : (

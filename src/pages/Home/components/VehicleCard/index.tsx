@@ -40,6 +40,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({vehicle}) => {
 
           <SupplierIcon
             size={18}
+            dark={appTheme === 'light'}
             supplierName={vehicle.supplier.supplierName}
           />
 

@@ -21,7 +21,7 @@ const ProductImage: React.FC<ProductImage> = ({vehicleType, supplierName}) => {
       <S.SupplierLogoWrapper
         backgroundColor={theme.colors.background}
         borderColor={theme.colors.border}>
-        <SupplierIcon size={20} supplierName={supplierName} />
+        <SupplierIcon dark size={20} supplierName={supplierName} />
       </S.SupplierLogoWrapper>
     </S.Wrapper>
   );
