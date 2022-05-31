@@ -1,25 +1,42 @@
 // Style file using Styled Components
+import {Text} from '@components';
+import {ThemeProps} from '../../../src/style/globalStyle';
 import styled from 'styled-components/native';
 
 export const Wrapper = styled.View`
   flex: 1;
-  justify-content: center;
+`;
+
+type TitleProps = {
+  theme: ThemeProps;
+};
+export const Title = styled(Text)<TitleProps>`
+  font-size: 32px;
+  margin-bottom: 12px;
+  margin-top: 24px;
+`;
+
+export const ProfilePictureWrapper = styled.View`
+  margin-top: 12px;
+  margin-bottom: 18px;
   align-items: center;
 `;
 
-export const Title = styled.Text``;
-
-export const Button = styled.TouchableOpacity`
-  border-radius: 4px;
-  margin: 4px;
-`;
-
-type ButtonTextProps = {
-  bgColor: string;
+type ProfilePictureProps = {
+  size: number;
 };
-export const ButtonText = styled.Text<ButtonTextProps>`
-  color: ${props => props.bgColor || '#000000'};
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 16px;
+export const ProfilePicture = styled.Image<ProfilePictureProps>`
+  width: ${({size}) => size}px;
+  height: ${({size}) => size}px;
+  border-radius: ${({size}) => size}px;
+  overflow: hidden;
 `;
+
+export const Links = styled.View`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 16px;
+`;
+
+export const LinkWrapper = styled.TouchableOpacity``;

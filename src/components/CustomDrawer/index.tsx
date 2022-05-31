@@ -11,8 +11,7 @@ import {useAppColorScheme} from '@context/theme/theme.context';
 
 const CustomDrawer: React.FC<DrawerContentComponentProps> = props => {
   const navigation = useNavigation();
-  const {theme} = useAppColorScheme();
-  const {appTheme, setAppTheme} = useAppColorScheme();
+  const {appTheme, setAppTheme, theme} = useAppColorScheme();
 
   const getIsActive = useCallback(
     (routeName: string) => {
@@ -63,6 +62,7 @@ const CustomDrawer: React.FC<DrawerContentComponentProps> = props => {
             Dark Mode:
           </Text>
           <Switch
+            color={theme.primary}
             value={appTheme === 'dark'}
             onValueChange={toggleColorScheme}
           />
